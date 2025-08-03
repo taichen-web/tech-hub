@@ -41,17 +41,17 @@ Next.js（App Router）+ React + TypeScript + Tailwind CSS によって構築さ
 ###  ローカルでの起動方法
 
 ---bash 
-# 依存パッケージをインストール
+・依存パッケージをインストール
 npm install
 
-# 開発サーバー起動（http://localhost:3000）
+・開発サーバー起動（http://localhost:3000）
 npm run dev
 
-## ビルド & デプロイ
-# 本番ビルド
+### ビルド & デプロイ
+・本番ビルド
 npm run build
 
-# 本番モードで起動（localhost:3000）
+・本番モードで起動（localhost:3000）
 npm start
 (このアプリは Vercel などのホスティングサービスに対応しています。)
 
@@ -60,8 +60,7 @@ npm start
 
 
 ### ディレクトリ構成（抜粋）
-コピーする
-編集する
+
 ├── app/              # Next.js App Router Pages
 ├── components/       # UIコンポーネント
 ├── context/          # 投稿一覧状態管理用Context
