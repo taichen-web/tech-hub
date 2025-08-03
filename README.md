@@ -7,8 +7,6 @@ Next.js（App Router）+ React + TypeScript + Tailwind CSS によって構築さ
 
 ---
 
-
-
 ###  機能一覧
 
 - 投稿の作成・編集・削除（CRUD）
@@ -22,8 +20,6 @@ Next.js（App Router）+ React + TypeScript + Tailwind CSS によって構築さ
 
 ---
 
-
-
 ###  使用技術スタック
 
 | 分類        | 使用技術                      |
@@ -36,42 +32,42 @@ Next.js（App Router）+ React + TypeScript + Tailwind CSS によって構築さ
 
 ---
 
-
-
 ###  ローカルでの起動方法
-
----bash 
-・依存パッケージをインストール
+ 
+・依存パッケージをインストール：  
 npm install
 
-・開発サーバー起動（http://localhost:3000）
+・開発サーバー起動：  
 npm run dev
 
 ### ビルド & デプロイ
-・本番ビルド
+・本番ビルド：  
 npm run build
 
-・本番モードで起動（localhost:3000）
-npm start
+・本番モードで起動：
+npm start  
+
 (このアプリは Vercel などのホスティングサービスに対応しています。)
 
 ---
 
-
-
 ### ディレクトリ構成（抜粋）
 
-<pre lang="md"> ### ディレクトリ構成（抜粋） ``` app/ # Next.js App Router Pages components/ # UIコンポーネント context/ # 投稿一覧状態管理用Context data/ # 初期モック投稿 public/ # 静的ファイル styles/ # グローバルCSS types/ # 型定義 README.md ``` </pre>
-
+├── app/              # Next.js App Router Pages  
+├── components/       # UIコンポーネント  
+├── context/          # 投稿一覧状態管理用Context  
+├── data/             # 初期モック投稿  
+├── public/           # 静的ファイル  
+├── styles/           # グローバルCSS  
+├── types/            # 型定義  
+└── README.md  
 
 ---
-
-
 
 ### 開発者
 GitHubアカウント:taichen-web
 
-
+---
 
 ### 備考
 バックエンドは未実装で、データはブラウザの localStorage に保存されます。
