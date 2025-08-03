@@ -61,14 +61,14 @@ npm start
 
 ### ディレクトリ構成（抜粋）
 
-├── app/ # Next.js App Router Pages
-├── components/ # UIコンポーネント
-├── context/ # 投稿一覧状態管理用Context
-├── data/ # 初期モック投稿
-├── public/ # 静的ファイル
-├── styles/ # グローバルCSS
-├── types/ # 型定義
-└── README.md
+app/ # Next.js App Router Pages
+components/ # UIコンポーネント
+context/ # 投稿一覧状態管理用Context
+data/ # 初期モック投稿
+public/ # 静的ファイル
+styles/ # グローバルCSS
+types/ # 型定義
+README.md
 
 
 ---
