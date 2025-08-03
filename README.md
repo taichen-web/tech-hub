@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TechHub - Developer Knowledge Sharing App
 
-## Getting Started
+**TechHub** は、エンジニア同士が技術的な知見・ノウハウを投稿・共有できるシンプルなナレッジプラットフォームアプリです。  
+**バックエンドは実装しておらず、DB の代わりに `localStorage` を利用した最小構成**で動作しています。
 
-First, run the development server:
+Next.js（App Router）+ React + TypeScript + Tailwind CSS によって構築され、Markdown形式の投稿、タグ付け、検索、ページネーション、簡易ログイン機能（localStorageベース）などを実装しています。
 
-```bash
+---
+
+
+
+###  機能一覧
+
+- 投稿の作成・編集・削除（CRUD）
+- Markdownエディタ対応（HTML表示）
+- タグ機能（カンマ区切りで自由入力）
+- 投稿の検索（タイトル / タグ）
+- ページネーション（10件ごとの表示）
+- ログイン状態に応じたUI表示切替（localStorage）
+- **バックエンド・DBなし（localStorageでデータを保持）**
+- レスポンシブ対応（Tailwind CSS）
+
+---
+
+
+
+###  使用技術スタック
+
+| 分類        | 使用技術                      |
+|-------------|-------------------------------|
+| フロントエンド | Next.js (App Router), React, TypeScript |
+| スタイリング | Tailwind CSS, shadcn/ui       |
+| 状態管理    | React Context + useReducer     |
+| UIコンポーネント | カスタムコンポーネント分割設計      |
+| データ保存   | localStorage（簡易DB）        |
+
+---
+
+
+
+###  ローカルでの起動方法
+
+---bash 
+# 依存パッケージをインストール
+npm install
+
+# 開発サーバー起動（http://localhost:3000）
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ビルド & デプロイ
+# 本番ビルド
+npm run build
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# 本番モードで起動（localhost:3000）
+npm start
+(このアプリは Vercel などのホスティングサービスに対応しています。)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### ディレクトリ構成（抜粋）
+コピーする
+編集する
+├── app/              # Next.js App Router Pages
+├── components/       # UIコンポーネント
+├── context/          # 投稿一覧状態管理用Context
+├── data/             # 初期モック投稿
+├── public/           # 静的ファイル
+├── styles/           # グローバルCSS
+├── types/            # 型定義
+└── README.md
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+### 開発者
+GitHubアカウント:taichen-web
+
+
+
+### 備考
+バックエンドは未実装で、データはブラウザの localStorage に保存されます。
+
+本アプリは簡易的な認証（localStorageベース）で動作しており、本番環境用のセキュリティ対策は未実装です。
+
+投稿内容は Markdown を HTML に変換して表示しており、将来的に sanitize-html 等によるXSS対策が必要になる可能性があります。
